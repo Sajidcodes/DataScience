@@ -80,6 +80,14 @@
     margin-bottom: 2.5rem;
   }
   .progress-bar-wrap {
+    position: sticky;
+    top: 52px;
+    z-index: 99;
+    background: var(--bg);
+    padding: 8px 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .progress-bar-inner {
     background: var(--border); height: 3px; border-radius: 2px;
     position: relative; overflow: visible;
   }
@@ -91,6 +99,7 @@
   .progress-label {
     font-family: var(--mono); font-size: .65rem; color: var(--muted);
     margin-top: .5rem; letter-spacing: .1em;
+    text-align: center;
   }
 
   /* SECTIONS */
@@ -443,14 +452,17 @@
   </div>
 </nav>
 
+<div class="progress-bar-wrap">
+  <div class="progress-bar-inner">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  <div class="progress-label" id="progressLabel">0% complete — let's begin</div>
+</div>
+
 <div class="hero">
   <div class="hero-tag">Data Science Fundamentals</div>
   <h1>Drawing Conclusions from <span>Data</span></h1>
   <p class="hero-sub">Learn to make data-driven decisions using statistical inference, hypothesis testing, and real-world examples from PCCC to Instagram ads.</p>
-  <div class="progress-bar-wrap">
-    <div class="progress-bar" id="progressBar"></div>
-  </div>
-  <div class="progress-label" id="progressLabel">0% complete — let's begin</div>
 </div>
 
 <!-- INTRODUCTION -->
